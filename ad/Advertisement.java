@@ -4,6 +4,11 @@ public class Advertisement {
     private Object content;
     private String name;
     private long initialAmount;
+
+    public int getHits() {
+        return hits;
+    }
+
     private int hits;
     private int duration;
     private long amountPerOneDisplaying;

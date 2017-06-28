@@ -28,12 +28,13 @@ public class Tablet extends Observable {
             notifyObservers(order);
             AdvertisementManager manager = new AdvertisementManager(10);
             manager.processVideos();
+            return order;
         } catch (NoVideoAvailableException e) {
             logger.log(INFO,"No video is available for the order "+order);
         } catch (IOException e) {
             logger.log(SEVERE, "Console is unavailable.");
         }
-        return order;
+        return null;
     }
 
     @Override
