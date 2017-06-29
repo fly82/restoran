@@ -26,7 +26,7 @@ public class Tablet extends Observable {
             ConsoleHelper.writeMessage(order.toString());
             setChanged();
             notifyObservers(order);
-            AdvertisementManager manager = new AdvertisementManager(10);
+            AdvertisementManager manager = new AdvertisementManager(700);
             manager.processVideos();
             return order;
         } catch (NoVideoAvailableException e) {
